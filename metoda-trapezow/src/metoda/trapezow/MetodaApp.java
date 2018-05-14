@@ -3,15 +3,15 @@ package metoda.trapezow;
 public class MetodaApp {
 
 	public static void main(String[] args) {
-		double n = 0;
+		double n=0;
 		for(String arg : args) {
 			n = Integer.parseInt(arg);
 		}
-		long startTime = System.currentTimeMillis();
+		double startTime = System.nanoTime();
 		metodaTrapezow(1, 14, n);
-		long endTime = System.currentTimeMillis();
+		double endTime = System.nanoTime();
 		
-		long duration = (endTime - startTime);
+		double duration = (endTime - startTime) / 1000000;
 		System.out.println(duration + "ms");
 		
 	}
